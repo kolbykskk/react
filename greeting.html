@@ -20,8 +20,22 @@
       }
     }
 
+    class OtherGreeting extends React.Component {
+      render() {
+        return (
+          <div>
+            <h2>and hello Kolby!</h2>
+          </div>
+        )
+      }
+    }
+
     ReactDOM.render(
-      <Greeting />, document.getElementById('app')
+      <div>
+        <Greeting />
+        <OtherGreeting />
+      </div>,
+      document.getElementById('app')
     );
   </script>
 </body>
