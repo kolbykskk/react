@@ -20,8 +20,30 @@
       }
     }
 
+    class OtherGreeting extends React.Component {
+      constructor(props){
+        super(props);
+        this.state = {
+          day: "Wednesday"
+        }
+      }
+
+      render() {
+        return (
+          <div>
+            <h1>Hello {this.props.otherName}!</h1>
+            <h2>Today is {this.state.day}!</h2>
+          </div>
+        );
+      }
+    }
+
     ReactDOM.render(
-      <Greeting name="Bloc Students"/>, document.getElementById('app')
+      <div>
+        <Greeting name="Bloc Students"/>
+        <OtherGreeting otherName="Kolby"/>
+      </div>,
+      document.getElementById('app')
     );
   </script>
 </body>
